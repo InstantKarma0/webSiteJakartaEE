@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* ---------------- HEADER ------------------ */
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+}
+
+/* ---------------- MAIN CONTENT ------------------ */
+
+
+#mMenuButton {
+    display: none;
+}
+
+header > #hTitle {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#gContainer {
+    padding: 50px 0;
+    background-color: #F2F2F2;
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    column-gap: 20px;
+}
+
+#contactForm {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#orOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginForm {
+    background-color: white;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 2fr) 1fr ;
+}
+
+
+.formTitle {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+
+}
+
+.formTitle > h2 {
+    font-size: 30px;
+}
+
+.formTitle > h3 {
+    font-size: 25px;
+}
+
+.formTitle > .errorMessage {
+    color: #ff2013;
+}
+
+.formField {
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
+}
+
+.formField > label {
+    font-size: 30px;
+}
+
+.formField > input {
+    font-size: 24px;
+    padding: 3px;
+}
+
+.formField > input:focus {
+    outline: none;
+}
+
+.formField > textarea {
+    resize: none;
+}
+
+.formField > textarea:focus {
+    outline: none;
+}
+
+.formField > label, .formField > input, .formField > textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+.formSubmit {
+    margin: 10px auto;
+}
+
+.formSubmit > input {
+    text-align: center;
+    height: 50px;
+    background-color: #30EB9C;
+    font-size: 35px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    border: 2px solid black;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.formSubmit > input:hover {
+    background-color: black;
+    color: #30EB9C;
+}
+
+
+/* ---------------- FOOTER ------------------ */
+
+footer {
+    border-top: 2px solid black;
+    height: 150px;
+    width: 100%;
+    background-color: crimson;
+}
+
+#gMap {
+    width: 100%;
+    height: 130px;
+}
+
+#copyrightContainer {
+    width: 100%;
+    text-align: end;
+    font-size: 20px;
+}
+
+#copyrightContainer > h6 {
+    font-size: 16px;
+}
+
+/* ---------------- MEDIA QUERIES ------------------ */
+
+@media screen and (max-width: 1200px) {
+    #gWrapper {
+        column-gap: 0;
+    }
+    .formField {
+        width: 95%;
+    }
+    #contactForm,#loginForm {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #gWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 50px 1fr;
+        row-gap: 20px;
+    }
+    .formField {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contactForm,#loginForm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-device-width: 480px) {
+
+    #gWrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 50px 1fr;
+        row-gap: 20px;
+    }
+    #contactForm,#loginForm {
+        width: 100%;
+    }
+    .formField {
+        width: 80%;
+    }
+}
